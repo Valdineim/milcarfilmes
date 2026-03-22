@@ -1,129 +1,63 @@
-body{
-margin:0;
-font-family:Arial;
-background:#e6e6e6;
-}
-
-/* BORDA LATERAL (3cm visual) */
-.container{
-width:calc(100% - 60px);
-max-width:1100px;
-margin:20px auto;
-background:white;
-border-radius:20px;
-padding:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* TOPO */
-.topo{
-background:#1f3c88;
-color:white;
-padding:15px;
+.headline {
 text-align:center;
-border-radius:10px;
-}
-
-/* BANNER */
-.banner img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:10px;
-}
-
-/* TEXTO */
-.section{
-text-align:center;
-padding:20px;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-}
-
-@media(min-width:900px){
-.grid{
-grid-template-columns:repeat(3,1fr);
-}
-}
-
-/* CARD */
-.card{
-background:white;
-border-radius:15px;
-padding:10px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 30px rgba(0,0,0,0.2);
-}
-
-.card img{
-width:100%;
-aspect-ratio:1/1;
-object-fit:cover;
-border-radius:10px;
-}
-
-/* PREÇO */
-.preco{
-position:absolute;
-background:#25D366;
-color:white;
-padding:5px 10px;
-border-radius:10px;
+font-size:20px;
+margin:10px;
 font-weight:bold;
 }
 
-/* BOTÃO */
-.card button{
-margin-top:10px;
+.sub {
+text-align:center;
+color:#555;
+margin-bottom:10px;
+}
+
+.carrinho-icon {
+position:fixed;
+top:15px;
+right:15px;
 background:#25D366;
 color:white;
-border:none;
 padding:10px;
+border-radius:50px;
+cursor:pointer;
+z-index:999;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse {
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+.carrinho {
+position:fixed;
+top:60px;
+left:10px;
+right:10px;
+background:white;
+border-radius:15px;
+padding:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+display:none;
+z-index:999;
+}
+
+.carrinho button {
+background:#25D366;
+color:white;
+padding:10px;
+border:none;
 border-radius:10px;
 width:100%;
-cursor:pointer;
 }
 
-/* CARRINHO */
-.carrinho{
-position:fixed;
-top:20px;
-right:20px;
-background:white;
-padding:15px;
-border-radius:15px;
-box-shadow:0 0 15px rgba(0,0,0,0.2);
-width:250px;
+.preco {
+position:absolute;
+background:#22c55e;
+color:white;
+padding:5px 10px;
+border-radius:10px;
+top:10px;
+left:10px;
 }
-
-/* FOOTER */
-.footer{
-position:fixed;
-bottom:0;
-width:100%;
-background:#1f3c88;
-padding:15px;
-display:flex;
-justify-content:space-around;
-}
-
-.footer i{
-font-size:22px;
-}
-
-/* CORES */
-.whats{color:#25D366;}
-.insta{color:#E1306C;}
-.face{color:#1877F2;}
-.tiktok{color:white;}
