@@ -2,45 +2,39 @@ let carrinho = [];
 let total = 0;
 
 function addCarrinho(nome, preco){
-    carrinho.push({nome, preco});
-    total += preco;
-
-    atualizarCarrinho();
+carrinho.push({nome,preco});
+total += preco;
+atualizar();
 }
 
-/* ATUALIZA NA TELA */
-function atualizarCarrinho(){
-    const lista = document.getElementById("lista");
-    const totalEl = document.getElementById("total");
+function atualizar(){
+let lista = document.getElementById("lista");
+let totalEl = document.getElementById("total");
+let contador = document.getElementById("contador");
 
-    lista.innerHTML = "";
+lista.innerHTML = "";
 
-    carrinho.forEach((item, index) => {
-        lista.innerHTML += `
-        <div style="display:flex; justify-content:space-between; margin:5px 0;">
-            <span>${item.nome}</span>
-            <span>R$${item.preco}</span>
-        </div>
-        `;
-    });
+carrinho.forEach(item=>{
+lista.innerHTML += `<p>${item.nome} - R$${item.preco}</p>`;
+});
 
-    totalEl.innerHTML = "Total: R$ " + total;
+totalEl.innerText = "Total: R$ " + total;
+contador.innerText = carrinho.length;
 }
 
-/* FINALIZAR */
+function toggleCarrinho(){
+let c = document.getElementById("carrinho");
+c.style.display = c.style.display === "block" ? "none" : "block";
+}
+
 function finalizar(){
-    if(carrinho.length === 0){
-        alert("Carrinho vazio!");
-        return;
-    }
+let msg = "Olá, quero orçamento:%0A";
 
-    let msg = "Pedido:%0A";
+carrinho.forEach(item=>{
+msg += `${item.nome} - R$${item.preco}%0A`;
+});
 
-    carrinho.forEach(item => {
-        msg += `${item.nome} - R$${item.preco}%0A`;
-    });
+msg += `%0ATotal: R$${total}`;
 
-    msg += `%0ATotal: R$${total}`;
-
-    window.open(`https://wa.me/5516994532971?text=${msg}`, "_blank");
+window.open("https://wa.me/5516994532971?text="+msg);
 }
