@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milcar Film's</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- TOPO -->
+<div class="topo">
+<h2>Milcar Film's</h2>
+<p>📞 (16) 99453-2971</p>
+</div>
+
+<!-- BANNER -->
+<div class="banner">
+<img src="banner.jpg">
+</div>
+
+<!-- TEXTO -->
+<div class="section">
+<h2>🚗 Proteja seu carro</h2>
+<p>Películas automotivas com qualidade premium e instalação profissional.</p>
+</div>
+
+<!-- PRODUTOS -->
+<div class="grid">
+
+<div class="card">
+<span class="preco">R$300</span>
+<img src="carro1.jpg">
+<p>Película automotiva</p>
+<button onclick="addCarrinho('Película automotiva',300)">Adicionar</button>
+</div>
+
+<div class="card">
+<span class="preco">R$350</span>
+<img src="carro2.jpg">
+<p>Insulfilm premium</p>
+<button onclick="addCarrinho('Insulfilm premium',350)">Adicionar</button>
+</div>
+
+<div class="card">
+<span class="preco">R$400</span>
+<img src="carro3.jpg">
+<p>Antivandalismo</p>
+<button onclick="addCarrinho('Antivandalismo',400)">Adicionar</button>
+</div>
+
+<div class="card">
+<span class="preco">R$250</span>
+<img src="carro4.jpg">
+<p>Vidro fumê</p>
+<button onclick="addCarrinho('Vidro fumê',250)">Adicionar</button>
+</div>
+
+<div class="card">
+<span class="preco">R$450</span>
+<img src="carro5.jpg">
+<p>Película residencial</p>
+<button onclick="addCarrinho('Residencial',450)">Adicionar</button>
+</div>
+
+</div>
+
+<!-- GALERIA (SUAS FOTOS ANTIGAS) -->
+<div class="section">
+<h2>📸 Trabalhos realizados</h2>
+<p>Veja alguns serviços feitos pela Milcar Film's</p>
+</div>
+
+<div class="grid">
+
+<div class="card"><img src="vidro.jpg"><p>Proteção antivandalismo</p></div>
+<div class="card"><img src="quebrado.jpg"><p>Vidro protegido</p></div>
+<div class="card"><img src="pelicula.jpg"><p>Aplicação profissional</p></div>
+<div class="card"><img src="antesdepois.jpg"><p>Antes e depois</p></div>
+<div class="card"><img src="carro6.jpg"><p>Resultado final</p></div>
+
+</div>
+
+<!-- CARRINHO -->
+<div id="carrinho" class="carrinho">
+<h3>🛒 Carrinho</h3>
+
+<div id="lista"></div>
+
+<p id="total">Total: R$ 0</p>
+
+<button onclick="finalizar()">Finalizar no WhatsApp</button>
+</div>
+
+</div>
+
+<!-- BOTÕES -->
+<div class="footer">
+
+<a href="https://wa.me/5516994532971" target="_blank">
+<i class="fab fa-whatsapp whats"></i>
+</a>
+
+<a href="tel:16994532971">
+<i class="fas fa-phone"></i>
+</a>
+
+<a href="https://instagram.com/milcarfilms" target="_blank">
+<i class="fab fa-instagram insta"></i>
+</a>
+
+<a href="https://facebook.com/" target="_blank">
+<i class="fab fa-facebook face"></i>
+</a>
+
+<a href="https://tiktok.com/@milcarfilms" target="_blank">
+<i class="fab fa-tiktok tiktok"></i>
+</a>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
